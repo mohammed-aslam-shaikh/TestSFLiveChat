@@ -15,16 +15,11 @@
   <br />
   <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Salesforce Sans", sans-serif;
+		background-color: #0050e3;
+		font-family: "Arial", sans-serif;
 	}
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
-	@font-face {
-		font-family: 'Salesforce Sans';
-		src: url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.woff') format('woff'),
-		url('https://c1.sfdcstatic.com/etc/clientlibs/sfdc-aem-master/clientlibs_base/fonts/SalesforceSans-Regular.ttf') format('truetype');
+		outline: 1px solid #0050e3;
 	}
 </style>
 
@@ -53,17 +48,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://printi--full.my.salesforce.com',
-			'https://full-printi.cs198.force.com/falaprinter',
+			'https://printi.my.salesforce.com',
+			'https://printi.force.com/falaprinter',
 			gslbBaseURL,
-			'00D050000004aci',
-			'Printi_Chat',
+			'00D390000005n0W',
+			'Printi_Chat_Prod',
 			{
-				baseLiveAgentContentURL: 'https://c.la2-c1cs-ia4.salesforceliveagent.com/content',
+				baseLiveAgentContentURL: 'https://c.la4-c4-ia2.salesforceliveagent.com/content',
 				deploymentId: '5723n0000008QBT',
 				buttonId: '5733n000000PCs6',
-				baseLiveAgentURL: 'https://d.la2-c1cs-ia4.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3n000000TN2mEAG_174fa7e8f07',
+				baseLiveAgentURL: 'https://d.la4-c4-ia2.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3n000000TN2rEAG_1754c3da611',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -71,7 +66,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://printi--full.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://printi.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
