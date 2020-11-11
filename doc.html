@@ -64,7 +64,10 @@
 		);
 	};
 
+    console.log("---window.embedded_svc---");
+    console.log(window.embedded_svc);
 	if (!window.embedded_svc) {
+        console.log("---if---");
 		var s = document.createElement('script');
 		s.setAttribute('src', 'https://printi.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
@@ -72,6 +75,7 @@
 		};
 		document.body.appendChild(s);
 	} else {
+        console.log("---else---");
 		initESW('https://service.force.com');
 	}
 </script>
